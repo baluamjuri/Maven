@@ -1,0 +1,60 @@
+Youtube links:
+------------------
+Maven-Installation-Configuration-Overview-Session1 :: https://www.youtube.com/watch?v=H8cA4ITQFyo
+Maven-Tutorial-Archetypes-Build-life-cycle-Session2 :: https://www.youtube.com/watch?v=Tl2i-UZQMlk
+Maven-Tutorial-Build-Profiles-Add-dependency-to-POM-Session3 :: https://www.youtube.com/watch?v=iBWwK0GZS0A
+Maven-tutorial-web-app-build-deploy-tomcat-session4 :: https://www.youtube.com/watch?v=2MMajtL3jVY
+Maven-Tutorial-Parent-POM-Repositories-Session5 :: https://www.youtube.com/watch?v=URL0ralNCUw 
+====================================================
+mvn archetype:generate - gives so many templates, each have a number to generate template
+
+groupId - url
+artifactId - name of the jar
+version
+package - pom, jar, war, ear
+
+setup
+------
+JAVA_HOME
+M2_HOME
+Path - for maven bin
+
+Build phases
+------------------
+validate
+compile
+test-compile
+test
+package
+install
+deploy
+
+Repositories
+-------------
+Public repository - artifactory, Nexus, ibiblo
+Local repository - users/592453/.m2/repository (default)
+Modifying local repository through conf/settings.xml
+Remote repository - accesses by the team of company only
+
+pom.xml
+--------
+plugins
+dependencies
+profiles
+- Build projects for diff environments
+- - Global(%M2_HOME%/conf/settings.xml)
+- - per user (%User_Home%/.m2/settings.xml) 
+- - Per Project (pom.xml)
+mvn test -P<profileId>
+Profile activation ProfileId
+Profile activation by OS
+Profile activation by env variables
+
+Parent and Child POM
+---------------------
+Modules - aggregation
+Parent - inheritence
+<repositories><id></id><url>%remote repository path%</url></repositories>
+<server><id></id><username></username><password></password></server
+
+
